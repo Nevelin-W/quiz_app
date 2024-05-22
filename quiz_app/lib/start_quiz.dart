@@ -8,8 +8,16 @@ class StartQuiz extends StatelessWidget {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
+        /* Opacity(
+          opacity: 0.7,
+          child: Image.asset(
+            'assets/images/quiz-logo.png',
+            width: 280,
+          ),
+        ), */
         Image.asset(
           'assets/images/quiz-logo.png',
+          color: const Color.fromARGB(206, 255, 255, 255),
           width: 280,
         ),
         const SizedBox(height: 65),
@@ -22,9 +30,13 @@ class StartQuiz extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 20),
-        OutlinedButton(
+        OutlinedButton.icon(
           onPressed: () {},
-          child: const Text(
+          icon: const Icon(
+            Icons.play_arrow,
+            color: Color.fromARGB(156, 31, 0, 92),
+          ),
+          label: const Text(
             'Start Quiz',
             style: TextStyle(
               color: Colors.white,
