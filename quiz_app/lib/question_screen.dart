@@ -12,9 +12,19 @@ class QuestionScreen extends StatefulWidget {
 }
 
 class _QuestionScreenState extends State<QuestionScreen> {
+  var currectQuestionIndex = 0;
+
+  answerQuestion() {
+    //currectQuestionIndex = currectQuestionIndex + 1;
+    //currectQuestionIndex += 1;
+    setState(() {
+      currectQuestionIndex++;
+    });
+  }
+
   @override
   Widget build(context) {
-    final currentQuestion = questions[0];
+    final currentQuestion = questions[currectQuestionIndex];
 
     return SizedBox(
       width: double.infinity,
@@ -39,7 +49,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
             ...currentQuestion.getShuffledAnswers().map((answer) {
               return AnswerButton(
                 answerText: answer,
-                onPressed: () {},
+                onPressed: answerQuestion,
               );
             }),
           ],
