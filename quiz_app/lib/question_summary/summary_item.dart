@@ -16,7 +16,7 @@ class SummaryItem extends StatelessWidget {
     final bool correct = (correctAnswer == userAnswer);
     final Color correctColor = correct
         ? const Color.fromARGB(255, 0, 255, 8)
-        : const Color.fromARGB(255, 148, 19, 10);
+        : const Color.fromARGB(255, 163, 34, 25);
 
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
