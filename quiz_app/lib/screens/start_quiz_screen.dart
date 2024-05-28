@@ -25,9 +25,10 @@ class StartQuizScreen extends StatelessWidget {
         ),
         const SizedBox(height: 65),
         Text('Learn Flutter the fun way!',
+            textAlign: TextAlign.center,
             style: GoogleFonts.firaCode(
               color: const Color.fromARGB(255, 255, 255, 255),
-              fontSize: 25,
+              fontSize: 20,
               fontWeight: FontWeight.bold,
             )
             /* TextStyle(
